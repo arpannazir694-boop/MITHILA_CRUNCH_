@@ -1,0 +1,643 @@
+/* =================================================
+   RESET & BASE
+================================================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #f7f2ee;
+  color: #3e2723;
+}
+
+.hidden {
+  display: none;
+}
+
+/* =================================================
+   COMMON BUTTONS
+================================================= */
+.primary-btn {
+  padding: 13px 28px;
+  border: none;
+  border-radius: 24px;
+  background: linear-gradient(135deg, #6d4c41, #3e2723);
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.primary-btn:hover {
+  opacity: 0.95;
+}
+
+.secondary-btn {
+  padding: 12px 26px;
+  border-radius: 24px;
+  border: 1px solid #d7b899;
+  background: transparent;
+  color: #d7b899;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* =================================================
+   AUTH PAGE (LOGIN / SIGNUP / FORGOT)
+================================================= */
+.page-bg {
+  min-height: 100vh;
+  background: radial-gradient(circle at top, #5a3a2e, #2b1a14);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.card {
+  width: 100%;
+  max-width: 420px;
+  background: #f7f2ee;
+  border-radius: 28px;
+  padding: 34px 34px 40px;
+  text-align: center;
+  box-shadow: 0 40px 80px rgba(0,0,0,0.45);
+}
+
+.avatar {
+  width: 84px;
+  height: 84px;
+  border-radius: 50%;
+  margin: 0 auto 18px;
+  background: linear-gradient(145deg, #4e342e, #3e2723);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 30px;
+  box-shadow: 0 14px 30px rgba(62,39,35,0.6);
+}
+
+.card h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 26px;
+}
+
+.card h1 span {
+  color: #8d6e63;
+}
+
+.tagline {
+  font-size: 13px;
+  color: #7a6a63;
+  margin: 6px 0 22px;
+}
+
+/* Tabs */
+.tabs {
+  display: flex;
+  background: #e6ded9;
+  border-radius: 14px;
+  overflow: hidden;
+  margin-bottom: 22px;
+}
+
+.tabs button {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  background: transparent;
+  font-size: 14px;
+  cursor: pointer;
+  color: #6d4c41;
+}
+
+.tabs button.active {
+  background: linear-gradient(135deg, #6d4c41, #4e342e);
+  color: #fff;
+}
+
+/* Inputs */
+.field {
+  position: relative;
+  margin-bottom: 16px;
+}
+
+.field i {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #8d6e63;
+}
+
+.field input {
+  width: 100%;
+  padding: 13px 14px 13px 42px;
+  border-radius: 14px;
+  border: none;
+  background: #efe7e2;
+  font-size: 14px;
+}
+
+.field input:focus {
+  outline: none;
+  box-shadow: inset 0 0 0 1.5px #6d4c41;
+}
+
+.forgot {
+  font-size: 12px;
+  color: #6d4c41;
+  text-align: right;
+  margin-bottom: 18px;
+  cursor: pointer;
+}
+
+.back {
+  font-size: 11px;
+  color: #6d4c41;
+  margin-top: 14px;
+  cursor: pointer;
+  opacity: 0.85;
+}
+
+/* =================================================
+   NAVBAR
+================================================= */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px 40px;
+  background: #3e2723;
+  color: #fff;
+}
+
+.logo {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 22px;
+}
+
+.logo span {
+  color: #d7b899;
+}
+
+.navbar nav a {
+  margin: 0 14px;
+  color: #e6ded9;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.nav-btn {
+  background: #d7b899;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 20px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+/* =================================================
+   HERO SLIDER
+================================================= */
+.hero-slider {
+  position: relative;
+  height: 85vh;
+  overflow: hidden;
+}
+
+.slides {
+  display: flex;
+  height: 100%;
+  transition: transform 0.8s ease;
+}
+
+.slide {
+  min-width: 100%;
+  height: 100%;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+}
+
+.slide::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(43,26,20,0.92),
+    rgba(43,26,20,0.45)
+  );
+}
+
+/* =================================================
+   HERO CONTENT
+================================================= */
+.hero-inner {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  padding: 80px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  color: #fff;
+}
+
+.hero-text h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 48px;
+  line-height: 1.1;
+}
+
+.hero-text span {
+  color: #d7b899;
+}
+
+.hero-text p {
+  max-width: 420px;
+  margin: 18px 0 26px;
+  font-size: 15px;
+  color: #e6ded9;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+/* =================================================
+   PURE & TRADITIONAL INFO BOX
+================================================= */
+.info-box {
+  background: linear-gradient(135deg, #f9f3ee, #f2e6dc);
+  padding: 28px 34px;
+  border-radius: 26px;
+  max-width: 300px;
+  text-align: center;
+  box-shadow:
+    0 18px 40px rgba(62, 39, 35, 0.25),
+    inset 0 1px 0 rgba(255,255,255,0.6);
+  backdrop-filter: blur(4px);
+}
+
+.info-box h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: #3e2723;
+  margin-bottom: 8px;
+}
+
+.info-box p {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #6d4c41;
+}
+
+/* =================================================
+   SLIDER DOTS
+================================================= */
+.slider-dots {
+  position: absolute;
+  bottom: 28px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 3;
+}
+
+.slider-dots span {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #aaa;
+  cursor: pointer;
+}
+
+.slider-dots span.active {
+  background: #d7b899;
+}
+
+/* =================================================
+   FEATURES SECTION
+================================================= */
+.features {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 26px;
+  padding: 80px 60px;
+  background: #f7f2ee;
+}
+
+.feature {
+  background: #fff;
+  padding: 30px;
+  border-radius: 22px;
+  text-align: center;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+}
+
+.feature h4 {
+  font-family: 'Montserrat', sans-serif;
+  margin-bottom: 8px;
+}
+
+/* =================================================
+   CTA + FOOTER
+================================================= */
+.cta {
+  padding: 80px 20px;
+  text-align: center;
+  background: linear-gradient(135deg, #6d4c41, #3e2723);
+  color: #fff;
+}
+
+.footer {
+  background: #2b1a14;
+  color: #ccc;
+  text-align: center;
+  padding: 18px;
+  font-size: 12px;
+}
+
+/* =================================================
+   RESPONSIVE
+================================================= */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .hero-inner {
+    flex-direction: column;
+    text-align: center;
+    padding: 60px 24px;
+  }
+
+  .hero-text h1 {
+    font-size: 34px;
+  }
+
+  .features {
+    grid-template-columns: 1fr;
+    padding: 60px 24px;
+  }
+}
+/* ================= PURE & TRADITIONAL OVERLAY ================= */
+
+.heritage-badge {
+  position: absolute;
+  bottom: 60px;
+  left: 60px;
+
+  padding: 22px 30px;
+  border-radius: 18px;
+
+  background: linear-gradient(
+    135deg,
+    rgba(62,39,35,0.92),
+    rgba(43,26,20,0.92)
+  );
+
+  backdrop-filter: blur(6px);
+
+  box-shadow:
+    0 20px 45px rgba(0,0,0,0.45),
+    inset 0 1px 0 rgba(255,255,255,0.15);
+
+  color: #fff;
+  max-width: 360px;
+}
+
+.heritage-badge h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 6px;
+
+  background: linear-gradient(
+    90deg,
+    #f5e1c8,
+    #d7b899
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.heritage-badge p {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #f0e5da;
+}
+
+/* subtle hover (desktop only) */
+@media (hover: hover) {
+  .heritage-badge:hover {
+    transform: translateY(-3px);
+    transition: 0.3s ease;
+  }
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
+  .heritage-badge {
+    left: 50%;
+    bottom: 40px;
+    transform: translateX(-50%);
+    text-align: center;
+  }
+}
+.heritage-badge::before {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 3px;
+  background: #d7b899;
+  border-radius: 2px;
+  margin-bottom: 10px;
+}
+/* ================= MENU BUTTON ================= */
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.menu-btn {
+  font-size: 24px;
+  cursor: pointer;
+  color: #fff;
+  user-select: none;
+}
+
+/* ================= SIDE MENU ================= */
+.side-menu {
+  position: fixed;
+  top: 0;
+  left: -300px;
+  width: 280px;
+  height: 100vh;
+  background: linear-gradient(180deg, #3e2723, #2b1a14);
+  box-shadow: 4px 0 30px rgba(0,0,0,0.4);
+  padding: 24px 20px;
+  transition: 0.35s ease;
+  z-index: 1001;
+}
+
+.side-menu.active {
+  left: 0;
+}
+
+/* header */
+.side-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 26px;
+  color: #d7b899;
+  cursor: pointer;
+}
+
+/* links */
+.side-links a {
+  display: block;
+  padding: 14px 10px;
+  margin-bottom: 6px;
+  color: #f2e6dc;
+  text-decoration: none;
+  font-size: 15px;
+  border-radius: 12px;
+  transition: 0.25s ease;
+}
+
+.side-links a:hover {
+  background: rgba(255,255,255,0.08);
+  padding-left: 18px;
+  color: #d7b899;
+}
+
+/* ================= OVERLAY ================= */
+.menu-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  backdrop-filter: blur(2px);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s ease;
+  z-index: 1000;
+}
+
+.menu-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+/* =================================================
+   PRODUCTS SECTION (CENTERED + SLIGHTLY BIGGER)
+================================================= */
+
+.products-section {
+  padding: 90px 60px;
+  background: #f7f2ee;
+  text-align: center;
+}
+
+.products-section h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 34px;
+  color: #3e2723;
+  margin-bottom: 6px;
+}
+
+.products-section .subtitle {
+  font-size: 14px;
+  color: #7a6a63;
+  margin-bottom: 42px;
+}
+
+/* ================= GRID ================= */
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 260px));
+  justify-content: center;
+  gap: 26px;
+}
+
+/* ================= CARD ================= */
+
+.product-card {
+  width: 260px;               /* 🔥 bigger */
+  height: 340px;              /* 🔥 proportional */
+  background: #ffffff;
+  border-radius: 22px;
+  padding: 16px;
+  box-shadow: 0 14px 34px rgba(0,0,0,0.14);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 22px 44px rgba(0,0,0,0.2);
+}
+
+/* ================= IMAGE ================= */
+
+.product-card img {
+  width: 100%;
+  height: 160px;              /* 🔥 bigger image */
+  object-fit: cover;
+  border-radius: 16px;
+  margin-bottom: 12px;
+}
+
+/* ================= TEXT ================= */
+
+.product-card h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #3e2723;
+  margin-bottom: 4px;
+  text-align: center;
+}
+
+.product-card .weight {
+  font-size: 13px;
+  color: #777;
+  margin-bottom: 6px;
+}
+
+.product-card .price {
+  font-size: 16px;
+  font-weight: 600;
+  color: #3e2723;
+  margin-bottom: auto; /* 🔥 button always bottom */
+}
+
+/* ================= BUTTON ================= */
+
+.product-card .primary-btn {
+  padding: 8px 18px;
+  font-size: 13px;
+  border-radius: 18px;
+}

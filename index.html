@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MITHILA CRUNCH | Sign In</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="page-bg">
+  <div class="card">
+
+    <!-- Avatar -->
+    <div class="avatar">
+      <i class="fa-solid fa-user"></i>
+    </div>
+
+    <!-- Brand -->
+    <h1>MITHILA <span>CRUNCH</span></h1>
+    <p class="tagline">Authentic Thekua Delivery</p>
+
+    <!-- Tabs -->
+    <div class="tabs">
+      <button type="button" class="active" onclick="showSignIn()">Sign In</button>
+      <button type="button" onclick="showSignUp()">Sign Up</button>
+    </div>
+
+    <!-- ================= SIGN IN ================= -->
+    <form id="signInForm">
+
+      <div class="field">
+        <i class="fa-regular fa-envelope"></i>
+        <input type="email" name="email" placeholder="Email address" required>
+      </div>
+
+      <div class="field">
+        <i class="fa-solid fa-lock"></i>
+        <input type="password" name="password" placeholder="Password" required>
+      </div>
+
+      <div class="forgot" onclick="showForgot()">Forgot password?</div>
+
+      <button type="submit" class="primary-btn">
+        Sign In
+      </button>
+    </form>
+
+    <!-- ================= SIGN UP ================= -->
+    <form id="signUpForm" class="hidden">
+
+      <div class="field">
+        <i class="fa-regular fa-user"></i>
+        <input type="text" name="fullname" placeholder="Full name" required>
+      </div>
+
+      <div class="field">
+        <i class="fa-regular fa-envelope"></i>
+        <input type="email" name="email" placeholder="Email address" required>
+      </div>
+
+      <div class="field">
+        <i class="fa-solid fa-lock"></i>
+        <input type="password" name="password" placeholder="Create password" required>
+      </div>
+
+      <button type="submit" class="primary-btn">
+        Create Account
+      </button>
+    </form>
+
+    <!-- ================= FORGOT PASSWORD ================= -->
+    <form id="forgotForm" class="hidden">
+
+      <div class="field">
+        <i class="fa-regular fa-envelope"></i>
+        <input
+          type="email"
+          id="forgotEmail"
+          name="email"
+          placeholder="Registered email"
+          required
+        >
+      </div>
+
+      <button type="button" class="primary-btn" onclick="sendOtp()">
+        Send OTP
+      </button>
+
+      <!-- OTP SECTION -->
+      <div id="otpSection" class="hidden" style="margin-top:16px;">
+
+        <div class="field">
+          <i class="fa-solid fa-key"></i>
+          <input type="text" id="otp" name="otp" placeholder="Enter OTP">
+        </div>
+
+        <div class="field">
+          <i class="fa-solid fa-lock"></i>
+          <input
+            type="password"
+            id="newPassword"
+            name="newPassword"
+            placeholder="New password"
+          >
+        </div>
+
+        <button type="button" class="primary-btn" onclick="resetPassword()">
+          Reset Password
+        </button>
+      </div>
+
+      <p class="back" onclick="showSignIn()">Back to Sign In</p>
+    </form>
+
+  </div>
+</div>
+
+<!-- JS MUST BE AT END -->
+<script src="main.js"></script>
+</body>
+</html>

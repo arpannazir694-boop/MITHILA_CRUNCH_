@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MITHILA CRUNCH | Home</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ================= NAVBAR ================= -->
+<!-- ===== TOP NAVBAR ===== -->
+<header class="navbar">
+  <div class="nav-left">
+    <div class="menu-btn" onclick="openMenu()">☰</div>
+    <div class="logo">MITHILA <span>CRUNCH</span></div>
+  </div>
+
+  <button class="nav-btn" onclick="logout()">Logout</button>
+
+</header>
+
+<!-- ===== SIDE MENU ===== -->
+<div class="side-menu" id="sideMenu">
+  <div class="side-header">
+    <span>Menu</span>
+    <button class="close-btn" onclick="closeMenu()">×</button>
+  </div>
+
+  <nav class="side-links">
+    <a href="home.html">Home</a>
+    <a href="#products" class="menu-link">Products</a>
+    <a href="#">Orders</a>
+    <a href="#">Track Order</a>
+    <a href="#">Reviews</a>
+    <a href="#">Contact</a>
+    <a href="#">About Us</a>
+  </nav>
+</div>
+
+<!-- overlay -->
+<div class="menu-overlay" id="menuOverlay" onclick="closeMenu()"></div>
+
+
+<!-- ================= HERO ================= -->
+<!-- ================= HERO SLIDER ================= -->
+<section class="hero-slider">
+
+  <div class="slides" id="slides">
+    <!-- JS inject করবে -->
+  </div>
+
+  <div class="slider-dots" id="dots"></div>
+<div class="heritage-badge">
+  <h3>Pure & Traditional</h3>
+  <p>No preservatives. No compromise.</p>
+</div>
+
+</section>
+
+<script src="slider.js"></script>
+
+
+<!-- ================= FEATURES ================= -->
+<section class="features">
+  <div class="feature">
+    <i class="fa-solid fa-seedling"></i>
+    <h4>Natural Ingredients</h4>
+    <p>Made with desi ghee and carefully selected ingredients.</p>
+  </div>
+
+  <div class="feature">
+    <i class="fa-solid fa-hands"></i>
+    <h4>Handmade</h4>
+    <p>Each piece is handmade following Mithila tradition.</p>
+  </div>
+
+  <div class="feature">
+    <i class="fa-solid fa-truck"></i>
+    <h4>Fast Delivery</h4>
+    <p>Fresh thekua delivered safely to your doorstep.</p>
+  </div>
+</section>
+<!-- ================= PRODUCTS ================= -->
+<section class="products-section" id="products">
+  <h2>Our Thekua Collection</h2>
+  <p class="subtitle">
+    Authentic Mithila taste, handmade with love
+  </p>
+
+  <div class="products-grid" id="productsGrid">
+    <!-- Products JS থেকে আসবে -->
+  </div>
+</section>
+
+<!-- ================= CTA ================= -->
+<section class="cta">
+  <h2>Experience the Taste of Mithila</h2>
+  <p>Order now and enjoy authentic homemade thekua.</p>
+  <button class="primary-btn">Start Ordering</button>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+  <p>© 2026 Mithila Crunch. All rights reserved.</p>
+</footer>
+
+<!-- ================= HOME JS ================= -->
+<script src="home.js"></script>
+</body>
+<script>
+  function openMenu() {
+    document.getElementById("sideMenu").classList.add("active");
+    document.getElementById("menuOverlay").classList.add("active");
+  }
+
+  function closeMenu() {
+    document.getElementById("sideMenu").classList.remove("active");
+    document.getElementById("menuOverlay").classList.remove("active");
+  }
+</script>
+<script src="products.js"></script>
+
+</html>
